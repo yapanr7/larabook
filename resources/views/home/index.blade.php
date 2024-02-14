@@ -8,14 +8,14 @@
             <div class="col-lg-11 col-12">
                 <div class="row">
                     <div class="col-lg-6 col-12 copywriting">
-                        <p class="story">
-                            LEARN FROM EXPERT
+                        <p class="story ">
+                            VIP SKIN CENTER
                         </p>
-                        <h1 class="header">
-                            Start Your <span class="text-purple">Developer <br> Journey</span> Today
+                        <h1 class="header  animate__animated animate__pulse">
+                            Start Your <span class="text-purple">Online <br> Booking</span> Today
                         </h1>
                         <p class="support">
-                            Our bootcamp is helping junior developers who <br> are really passionate in the programming.
+                           <strong> <span class="text-purple ">VIP SKIN CENTER</span></strong> believes everyone has a unique concept of beauty, that's why we will provide personalized and focus for facial, body, and hair treatment. Our commitment to give premium skin treatment that focuses on lasting and healthy skin naturally.
                         </p>
                         <p class="cta">
                             <a href="#bookinglist" class="btn btn-master btn-primary">
@@ -24,15 +24,15 @@
                         </p>
                     </div>
                    
-                    <div class="col-lg-6 col-12 text-center">
+                    <div class="col-lg-6 col-12 text-center ">
                         <a href="#">
-                            <img src="{{ asset('storage/background/' . $setting->app_background) }}" alt="{{ $setting->app_name }}" class="img-fluid" alt="">
+                            <img src="{{ asset('storage/background/' . $setting->app_background) }}" alt="{{ $setting->app_name }}" class="img-fluid rounded rounded-lg" alt="">
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row brands">
+        <div class="row brands animate__animated animate__fadeIn">
             <div class="col-lg-12 col-12 text-center">
                 <img src="{{ asset('images/brands.png') }}" alt="">
             </div>
@@ -45,22 +45,22 @@
         <div class="row text-center pb-70">
             <div class="col-lg-12 col-12 header-wrap">
                 <p class="story">
-                    OUR SUPER BENEFITS
+                    Cara Pemesanan {{ $setting->app_name }}
                 </p>
                 <h2 class="primary-header">
-                    Learn Faster & Better
+                    {{ $setting->app_tagline }}
                 </h2>
             </div>
         </div>
-        <div class="row">
+        <div class="row ">
             <div class="col-lg-3 col-12">
-                <div class="item-benefit">
-                    <img src="{{ asset('assets/images/ic_globe.png') }}" class="icon" alt="">
+                <div class="item-benefit ">
+                    <img src="{{ asset('assets/images/ic_globe-2.png') }}" class="icon" alt="">
                     <h3 class="title">
-                        Diversity
+                        Member Login
                     </h3>
                     <p class="support">
-                        Learn from anyone around the <br> world and get a new skills
+                       Sebelum melakukan pemesanan <br> member melakukan pendaftaran atau login akun
                     </p>
                 </div>
             </div>
@@ -68,21 +68,21 @@
                 <div class="item-benefit">
                     <img src="{{ asset('assets/images/ic_globe-1.png') }}" class="icon" alt="">
                     <h3 class="title">
-                        A.I Guideline
+                       Booking
                     </h3>
                     <p class="support">
-                        Lara will help you to choose <br> which path that suitable for you
+                        Member klik memilih treatment <br> lalu klik booking untuk pemesanan
                     </p>
                 </div>
             </div>
             <div class="col-lg-3 col-12">
                 <div class="item-benefit">
-                    <img src="{{ asset('assets/images/ic_globe-2.png') }}" class="icon" alt="">
+                    <img src="{{ asset('assets/images/ic_globe.png') }}" class="icon" alt="">
                     <h3 class="title">
-                        1-1 Mentoring
+                        Transaction
                     </h3>
                     <p class="support">
-                        We will ensure that you will get <br> what you really do need
+                        Member melakukan pembayaran <br> bisa dengan uang muka atau pembayaran penuh
                     </p>
                 </div>
             </div>
@@ -90,10 +90,10 @@
                 <div class="item-benefit">
                     <img src="{{ asset('assets/images/ic_globe-3.png') }}" class="icon" alt="">
                     <h3 class="title">
-                        Future Job
+                        Finish
                     </h3>
                     <p class="support">
-                        Get your dream job in your dream <br> company together with us
+                        Pemesanan berhasil. <br> 
                     </p>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                             </div>
                         @else
                         @foreach ($latestPackages as $package)
-                    <div class="col-lg-3 col-12">
+                    <div class="col-lg-3 col-12 ">
                         <div class="card rouded shadow-lg card-animate">
                             <img src="{{ asset('storage/' . $package->image) }}" style="object-fit: cover;"
                                 class="card-img-top" height="250" alt="{{ $package->name }}">

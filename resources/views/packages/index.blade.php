@@ -15,7 +15,7 @@
                 <div class="col">
                     <div class="p-2">
                         <h1 class="text-purple mb-1">Packages</h1>
-                        <h4 class="text-dark text-opacity-75">Pilih Package yang kamu mau</h4>
+                        <h4 class="text-dark text-opacity-75">Our Treatment</h4>
 
                     </div>
                 </div>

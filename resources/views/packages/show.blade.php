@@ -15,7 +15,7 @@
                 <div class="col">
                     <div class="p-2">
                         <h1 class="text-purple mb-1">{{ $package->name }}</h1>
-                        <h4 class="text-dark text-opacity-75">{{ $package->description }}</h4>
+                        <h5 class="text-dark text-opacity-75">{{ $package->description }}</h5>
 
                     </div>
                 </div>
@@ -73,22 +73,22 @@
                                         @foreach ($months as $month)
                                             <div class="col-4">
                                                 <button type="button"
-                                                    class="btn btn-sm w-100 mb-2 btn-primary fw-bold btn-block monthPickerItem"
+                                                    class="btn btn-sm w-100 mb-2 btn-success fw-bold btn-block monthPickerItem"
                                                     data-month="{{ $month }}">
                                                     {{ Carbon\Carbon::parse($month)->format('F Y') }}
                                                 </button>
                                             </div>
                                         @endforeach
                                     </div>
-                                    <div class="row mb-4">
-                                        <div class="col-12 col-lg-8 mx-auto">
+                                    <div class="row mb-6">
+                                        <div class="col-12 col-lg-12 mx-auto">
                                             <div class="swiper-container" style="overflow: hidden">
                                                 <div class="swiper-wrapper" id="dateListContainer">
                                                 </div>
                                             </div>
                                         </div>
 
-                                    </div>
+                                    </div><br>
 
                                     <div class="row" id="timeSlotsContainer"></div>
                                     <div class="mt-4">
@@ -265,7 +265,7 @@
                 function renderDates(dates) {
                     dateListContainer.innerHTML = dates.map(date => `
                     <div class="swiper-slide">
-                        <button type="button" style="height:60px" class="btn fw-bold w-100 shadow btn-sm btn-primary datePickerItem"
+                        <button type="button" style="height:60px" class="btn fw-bold w-100 shadow btn-sm btn-outline-info datePickerItem"
                             data-date="${date.date}">
                             ${date.tanggal}
                             <br>
@@ -279,7 +279,7 @@
 
                     // Periksa apakah selectedDateButton ditemukan
                     if (selectedDateButton) {
-                        selectedDateButton.classList.add('btn-primary');
+                        selectedDateButton.classList.add('btn-outline-info');
                         // Setelah memilih tanggal, panggil fungsi fetchAvailableSlots untuk merender slot waktu
                         fetchAvailableSlots(selectedDateButton.getAttribute('data-date'));
                     }
@@ -333,7 +333,7 @@
                 function renderTimeSlots(slots) {
                     timeSlotsContainer.innerHTML = slots.map(slot => `
                     <div class="col-3 col-md-3 col-lg-2 mb-3">
-                        <button data-time="${slot.time}" class="btn w-100 shadow btn-sm fw-bold ${slot.isAvailable ? 'btn-primary' : 'btn-dark'} timePickerItem">
+                        <button data-time="${slot.time}" class="btn w-100 shadow btn-sm fw-bold ${slot.isAvailable ? 'btn-success' : 'btn-dark'} timePickerItem">
                             ${slot.time}
                         </button>
                     </div>

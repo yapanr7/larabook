@@ -8,7 +8,7 @@
                        <x-logo></x-logo>
                     </div>
                     <div class="mt-4 fs-15">
-                       <ul class="list-inline mb-0 footer-social-link">
+                       <ul class="list-inline mb-0 ">
                             <li class="list-inline-item ">
                                 <a href="javascript: void(0);" class="avatar-xs  d-block">
                                     <div class="avatar-title rounded-circle">
