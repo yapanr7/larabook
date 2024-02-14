@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+.bg-custom {
+    background-color: #E38690;
+}
+.bg-custom2 {
+    background-color: #bd606a;
+}
+
+.bg-gray {
+    background-color: #f8f7f3;
+}
+body {
+    font-family: "Montserrat";
+
+    background: #ddd!important;
+}
+
+.loading {
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+
+.mt-80 {
+    margin-top: 80px;
+}
+
+
+.top-wid-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 320px;
+}
+.top-wid-bg::before
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: .9;
+    background: #4b38b3;
+    background: -webkit-gradient(linear,left bottom,left top,from(#221a52),to(#4b38b3));
+    background: linear-gradient(to top,#221a52,#4b38b3);
+}
+.top-wid-bg .top-wid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 767px) {
+    .fs-mobile {
+        font-size: 11px; /* Atur ukuran teks sesuai kebutuhan Anda */
+    }
+}

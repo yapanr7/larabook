@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Selanjutnya, Anda dapat menambahkan peraturan lain sesuai kebutuhan Anda, misalnya:
+
+# Redirect semua permintaan ke dalam direktori "public"
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ /public/$1 [L]
+
+# # Untuk menghindari direktori yang benar-benar ada di server
+# RewriteCond %{REQUEST_FILENAME} !-d
+# # Untuk menghindari file yang benar-benar ada di server
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^ index.php [L]
