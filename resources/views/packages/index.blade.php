@@ -2,20 +2,20 @@
 
 @section('content')
     <div class="container mt-80">
-        <div class="foreground ">
+        {{-- <div class="foreground ">
             <div class="top-wid-bg">
                 <img src="{{ asset('storage/background/' . $setting->app_background) }}" alt="{{ $setting->app_name }}"
                     class="top-wid-img">
             </div>
-        </div>
+        </div> --}}
         <div class="pt-4 mb-4 mb-lg-3 home-wrapper">
             <div class="row g-4">
 
                 <!--end col-->
                 <div class="col">
                     <div class="p-2">
-                        <h1 class="text-white mb-1">Packages</h1>
-                        <h4 class="text-white text-opacity-75">Pilih Package yang kamu mau</h4>
+                        <h1 class="text-purple mb-1">Packages</h1>
+                        <h4 class="text-dark text-opacity-75">Pilih Package yang kamu mau</h4>
 
                     </div>
                 </div>
@@ -54,8 +54,12 @@
                                                 </div>
 
                                             </div>
-                                            <a href="{{ route('packages.show', $package->slug) }}"
-                                                class="btn btn-primary bg-custom text-white w-100 fw-bold">Booking Now!</a>
+                                            <p>
+                                                <a href="{{ route('packages.show', $package->slug) }}" class="btn btn-master btn-secondary w-100 mt-3">
+                                                    Booking Now!
+                                                </a>
+                                            </p>
+                                            
                                         </div>
                                     </div>
                                 </div>

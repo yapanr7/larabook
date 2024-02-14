@@ -1,9 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+
     <div class="container " style="margin-top:80px">
-        <x-breadcrumb image="{{ asset('storage/' . $booking->package->image) }}" title="{{ $booking->code }}"
-            description="{{ $booking->package->name }}" />
+        {{-- <x-breadcrumb image="{{ asset('storage/' . $booking->package->image) }}" title="{{ $booking->code }}"
+            description="{{ $booking->package->name }}" /> --}}
 
         <div class="row justify-content-center">
 
@@ -128,15 +129,15 @@
                 </div>
 
                 @if ($booking->download)
-                    <a href="{{ $booking->download }}" class="btn btn-danger w-100 fw-bold mb-5 download-booking">
+                    <a href="{{ $booking->download }}" class="btn btn-warning btn-secondary w-100 mt-3 download-booking">
                         <i class="fa fa-download me-2"></i>Download
                     </a>
                 @else
 
-                <a href="{{ route('payment.index', $booking->code) }}" class="btn btn-primary w-100 fw-bold mb-3"><i
+                <a href="{{ route('payment.index', $booking->code) }}" class="btn btn-master btn-primary w-100 mt-3"><i
                     class="fa fa-arrow-right me-2"></i>Lanjutkan Booking</a>
 
-                    <a href="#" class="btn btn-danger w-100 fw-bold mb-5 cancel-booking"
+                    <a href="#" class="btn btn-master btn-danger w-100 mt-3 cancel-booking"
                         data-booking-code="{{ $booking->code }}">
                         <i class="fa fa-times me-2"></i>Batalkan Booking
                     </a>

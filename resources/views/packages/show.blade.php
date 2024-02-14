@@ -3,19 +3,19 @@
 @section('content')
 
     <div class="container mt-80">
-        <div class="foreground ">
+        {{-- <div class="foreground ">
             <div class="top-wid-bg">
                 <img src="{{ asset('storage/' . $package->image) }}" alt="" class="top-wid-img">
             </div>
-        </div>
+        </div> --}}
         <div class="pt-4 mb-4 mb-lg-3 home-wrapper">
             <div class="row g-4">
 
                 <!--end col-->
                 <div class="col">
                     <div class="p-2">
-                        <h1 class="text-white mb-1">{{ $package->name }}</h1>
-                        <h4 class="text-white text-opacity-75">{{ $package->description }}</h4>
+                        <h1 class="text-purple mb-1">{{ $package->name }}</h1>
+                        <h4 class="text-dark text-opacity-75">{{ $package->description }}</h4>
 
                     </div>
                 </div>
@@ -95,18 +95,18 @@
                                         @auth
 
                                             @if (auth()->user()->email_verified_at)
-                                                <button class="btn btn-primary bg-custom text-white w-100 fw-bold"
+                                                <button class="btn btn-master btn-secondary w-100 mt-3"
                                                     id="openBookingModal">Booking Now!</button>
                                                     @else
 
-                                        <a href="{{ route('verification.notice')}}" class="btn btn-primary bg-custom text-white w-100 fw-bold"
+                                        <a href="{{ route('verification.notice')}}" class="btn btn-master btn-secondary w-100 mt-3"
                                         >Verifikasi akun untuk booking</a>
                                             @endif
                                         @endauth
                                         @guest
 
                                             <a href="{{ route('login') }}"
-                                                class="btn btn-primary bg-custom text-white w-100 fw-bold"
+                                                class="btn btn-master btn-secondary w-100 mt-3"
                                                 id="loginBooking">Login to Booking!</a>
                                         @endguest
                                     </div>

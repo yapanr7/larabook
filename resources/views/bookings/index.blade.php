@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="container mt-80">
-     <x-breadcrumb/>
+     {{-- <x-breadcrumb/> --}}
 
         @if ($userBookings->isEmpty())
         <div class="row">

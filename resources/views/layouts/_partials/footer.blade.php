@@ -1,5 +1,5 @@
    <!-- Start footer -->
-   <footer class="custom-footer bg-custom py-5 position-relative">
+   <footer class="custom-footer bg-white py-5 position-relative">
     <div class="container">
         <div class="row text-center  align-items-center ">
             <div class="col-lg-8 mt-4 mx-auto">
@@ -10,7 +10,7 @@
                     <div class="mt-4 fs-15">
                        <ul class="list-inline mb-0 footer-social-link">
                             <li class="list-inline-item ">
-                                <a href="javascript: void(0);" class="avatar-xs d-block">
+                                <a href="javascript: void(0);" class="avatar-xs  d-block">
                                     <div class="avatar-title rounded-circle">
                                         <i class="ri-facebook-fill text-white"></i>
                                     </div>
@@ -18,7 +18,7 @@
                             </li>
                             <li class="list-inline-item">
                                 <a href="javascript: void(0);" class="avatar-xs d-block">
-                                    <div class="avatar-title rounded-circle">
+                                    <div class="avatar-title  rounded-circle">
                                         <i class="ri-github-fill text-white"></i>
                                     </div>
                                 </a>
